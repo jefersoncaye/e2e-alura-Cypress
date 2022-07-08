@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "cypress": "^10.3.0",
+    "eslint": "^8.19.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-cypress": "^2.12.1"
+  },
+  "scripts": {
+    "lint": "eslint cypress/**/*.js",
+    "lint:fix": "eslint cypress/**/*.js --fix"
+  }
+}
