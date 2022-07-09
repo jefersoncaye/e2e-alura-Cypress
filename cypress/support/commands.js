@@ -13,5 +13,13 @@ Cypress.Commands.add('login', (username, password, {cacheSession = true} = {}) =
 	} else{
 		login()
 	}
+})
 
+Cypress.Commands.add('acessaPerfilUsuario', () =>{
+	cy.intercept('GET', '*user/*').as('waitUser')
+	cy.log('Dado que eu acesse "Perfil e Certificados"')
+	cy.get('.content-menu-section-profile > .content-menu-button').should('be.visible').click()
+	cy.get('.content-menu-section-profile > #profileList > .header-nav-link--profile')
+		.should('be.visible').click()
+	cy.wait('@waitUser')
 })
