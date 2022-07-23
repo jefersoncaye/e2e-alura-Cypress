@@ -9,4 +9,13 @@ module.exports = defineConfig({
       experimentalSessionAndOrigin: true,
       pageLoadTimeout: 120000
   },
+  reporter: 'mochawesome',
+    reporterOptions: {
+      overwrite: true,
+      json: true,
+      html: false,
+      //timestamp: 'dd-mm-yyyy_(HH-MM)',
+      reportFilename: "[name]",
+      reportDir: "cypress/report/mochawesome-report" 
+    }
 });
