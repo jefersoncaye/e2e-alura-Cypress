@@ -7,6 +7,10 @@
   },
   "scripts": {
     "lint": "eslint cypress/**/*.js",
-    "lint:fix": "eslint cypress/**/*.js --fix"
+    "lint:fix": "eslint cypress/**/*.js --fix",
+    "cypress:open": "cypress open",
+    "cypress:ci": "cypress run",
+    "cypress:chrome": "cypress run --browser chrome",
+    "cypress:firefox": "cypress run --browser firefox"
   }
 }

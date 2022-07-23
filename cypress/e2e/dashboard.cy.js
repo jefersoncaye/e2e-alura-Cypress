@@ -58,6 +58,4 @@ describe ('Validacoes Dashboard', () =>{
 		cy.get('.degreesInProgress__content-title > a').should('have.text', 'Testes em .NET')
 	})
 
-
-
 })
